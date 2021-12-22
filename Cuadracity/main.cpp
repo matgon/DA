@@ -9,14 +9,14 @@
 
 #include "Digrafo.h"  // propios o los de las estructuras de datos de clase
 
-class OrdenTopologico {
+class Camino {
     public:
         // g es DAG
-        OrdenTopologico(Digrafo const& g) : visit(g.V(), false), cont(0) {
+        Camino(Digrafo const& g) : visit(g.V(), false), cont(0) {
             dfs(g, 1); //desde el vertice 1 cuantos caminos hay hasta el final
         }
         // devuelve la ordenación topológica
-        int const& orden() const {
+        int const& num_caminos() const {
             return cont;
         }
     private:
@@ -42,9 +42,9 @@ class OrdenTopologico {
 // comentario sobre el coste, O(f(N)), donde N es ...
 int resolver(const Digrafo& g) {
 
-    OrdenTopologico k(g);
+    Camino k(g);
 
-    return k.orden();
+    return k.num_caminos();
 
 }
 
