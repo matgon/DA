@@ -1,8 +1,8 @@
 
 // Nombre y Apellidos
 
-// Comentario general sobre la soluci髇,
-// explicando c髆o se resuelve el problema
+// Comentario general sobre la soluci贸n,
+// explicando c贸mo se resuelve el problema
 
 #include <iostream>
 #include <fstream>
@@ -13,7 +13,7 @@
 
 #include "Matriz.h"  // propios o los de las estructuras de datos de clase
 
-// funci髇 que resuelve el problema
+// funci贸n que resuelve el problema
 // comentario sobre el coste, O(f(N)), donde N es ...
 const int INF = 10000000;
 
@@ -41,7 +41,7 @@ std::vector<int> resolver(const std::vector<std::vector<int>>& pueblos, int n) {
                 }
 
 
-                if (pueblos[i - 1][j - i - 1] + matriz[i - 1][i] < min) { //no cogemos ese cofre
+                if (pueblos[i - 1][j - i - 1] + matriz[i - 1][i] < min) {
                     matriz[i][j] = pueblos[i - 1][j - i - 1] + matriz[i - 1][i];
                 }
                 else {
@@ -62,7 +62,7 @@ std::vector<int> resolver(const std::vector<std::vector<int>>& pueblos, int n) {
 }
 
 // resuelve un caso de prueba, leyendo de la entrada la
-// configuraci髇, y escribiendo la respuesta
+// configuraci贸n, y escribiendo la respuesta
 bool resuelveCaso() {
 
     // leer los datos de la entrada
